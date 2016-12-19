@@ -1,2 +1,2 @@
-# algo-combat
-Clojure vs Ruby algorithms comparison
+# combat
+Clojure vs Ruby algorithms comparison.
