@@ -19,6 +19,7 @@ class StackArray
   def push(element)
     @storage[] << element
   end
+  alias << :push
 
   def pop
     @storage.delete_at(@storage.size - 1)
@@ -46,6 +47,7 @@ class StackLinkedList
     @first = { data: element, previous: @first.empty? ? nil : @first }
     @size += 1
   end
+  alias << :push
 
   def pop
     data = @first[:data]
