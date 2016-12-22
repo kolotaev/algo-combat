@@ -9,6 +9,10 @@
 # - Array
 # - Linked List
 #
+# Usage:
+# - backtracking (ex. maze)
+# - code parsing
+# - memory management
 
 # Array implementation of a stack.
 class StackArray
