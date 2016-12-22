@@ -1,4 +1,4 @@
-# Stack is a general data-structure that implies FIFO behaviour.
+# Stack is a general data-structure that implies LIFO behaviour.
 # Has interface:
 # - push
 # - pop
