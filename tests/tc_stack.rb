@@ -81,6 +81,8 @@ class TestStack < Test::Unit::TestCase
       stack.pop
       stack.pop
       assert(stack.empty?)
+      stack.pop
+      assert(stack.empty?)
     end
   end
 

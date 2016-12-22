@@ -40,6 +40,7 @@ class StackArray
 end
 
 # Linked-List implementation of a stack.
+# Uses Single-linked list.
 class StackLinkedList
   attr_reader :size
 

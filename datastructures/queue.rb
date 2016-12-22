@@ -38,38 +38,38 @@ class QueueArray
 end
 
 # Linked-List implementation of a queue.
-# Uses Double-linked list.
+# Uses Single-linked list.
 class QueueLinkedList
   attr_reader :size
 
   def initialize
-    @first = {}
-    @last = {}
+    @start = {}
+    @end = {}
     @size = 0
   end
 
   def enqueue(element)
-    old_last = @last
-    @last = {
-      data: element,
-      prev: @first[:next].nil? ? {} : @first.
-      next: @last
-    }
+    old_end = @end
+    @end = { data: element, next: {} }
+    if empty?
+      @start = @end
+    else
+      old_end[:next] = @end
+    end
     @size += 1
   end
 
   def dequeue
     data = nil
-    unless @first.empty?
-      data = @first[:data]
+    unless empty?
+      data = @start[:data]
+      @start = @start[:next]
       @size -= 1
-    end
-    unless @last.empty?
     end
     data
   end
 
   def empty?
-    @first.empty?
+    @start.empty?
   end
 end
