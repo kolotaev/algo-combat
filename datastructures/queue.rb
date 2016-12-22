@@ -25,7 +25,7 @@ class QueueArray
   end
 
   def dequeue
-    @storage.delete_at 0
+    @storage.shift
   end
 
   def size
@@ -49,7 +49,8 @@ class QueueLinkedList
   end
 
   def enqueue(element)
-    @first = {
+    old_last = @last
+    @last = {
       data: element,
       prev: @first[:next].nil? ? {} : @first.
       next: @last

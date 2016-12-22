@@ -27,7 +27,7 @@ class StackArray
   end
 
   def pop
-    @storage.delete_at(@storage.size - 1)
+    @storage.pop
   end
 
   def size
