@@ -12,6 +12,8 @@
 # Usage:
 # - real queues processing
 # - data streams
+# - messaging
+# - jobs processing
 
 # Array implementation of a queue.
 # Ruby allows the one below, but for more efficient memory/speed use ring-buffer
