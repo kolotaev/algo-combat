@@ -12,6 +12,7 @@
 # Usage:
 # - backtracking (ex. maze, back-button, undo)
 # - code parsing
+# - interpreters (Dijkstra's  two-stack algorithm)
 # - memory management
 # - function calls
 
