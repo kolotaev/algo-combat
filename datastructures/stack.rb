@@ -1,4 +1,4 @@
-# Stack is a general data-structure that implies LIFO behaviour.
+# Stack is an abstract data type that implies LIFO behaviour.
 # Has interface:
 # - push
 # - pop
@@ -6,13 +6,14 @@
 # - size
 #
 # Can have several implementations:
-# - Array
-# - Linked List
+# - Array (on-total-time is faster /use doubling and quarter-shrinking/, uses less memory)
+# - Linked List (even worst-case takes constant time)
 #
 # Usage:
-# - backtracking (ex. maze)
+# - backtracking (ex. maze, back-button, undo)
 # - code parsing
 # - memory management
+# - function calls
 
 # Array implementation of a stack.
 class StackArray
