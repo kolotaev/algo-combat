@@ -38,7 +38,7 @@ class QueueArray
 end
 
 # Linked-List implementation of a queue.
-# Uses Single-linked list.
+# Uses Single-Linked list.
 class QueueLinkedList
   attr_reader :size
 
