@@ -50,7 +50,7 @@ class StackLinkedList
   end
 
   def push(element)
-    @first = { data: element, previous: @first.empty? ? {} : @first }
+    @first = { data: element, previous: @first }
     @size += 1
   end
 
