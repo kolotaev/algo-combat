@@ -29,7 +29,7 @@ class Bag
     @first = { data: element, next: {} }
     old_first[:next] = @first
     @size += 1
-    @current = @first if size == 1 or @current.empty?
+    @current = @first if size == 1 || @current.empty?
   end
 
   def next
