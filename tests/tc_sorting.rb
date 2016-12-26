@@ -1,5 +1,6 @@
 require_relative '../sorting/selection'
 require_relative '../sorting/insertion'
+require_relative '../sorting/shell'
 require 'test/unit'
 
 class TestSorting < Test::Unit::TestCase
@@ -7,7 +8,8 @@ class TestSorting < Test::Unit::TestCase
   def setup
     @classes = [
       Selection,
-      Insertion
+      Insertion,
+      Shell
     ]
   end
 
