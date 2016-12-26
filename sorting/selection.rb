@@ -3,7 +3,7 @@
 #
 # Time Performance:
 # O - n^2
-# ø - n^2
+# θ - n^2
 # Ω - n^2
 # Actually (n^2)/2.
 # In Theta almost always outperforms bubble sort and gnome sort.
