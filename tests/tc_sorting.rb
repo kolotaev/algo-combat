@@ -53,7 +53,7 @@ class TestSorting < Test::Unit::TestCase
     @classes.each do |klass|
       subject = klass.send(:new)
       data = [1, 0, 7, 8, 66, -7, 5, 54, 0, 3, 1000, 7]
-      assert_equal([-7, 0, 0, 1, 3, 5, 7, 8, 54, 66, 1000], subject.sort(data))
+      assert_equal([-7, 0, 0, 1, 3, 5, 7, 7, 8, 54, 66, 1000], subject.sort(data))
     end
   end
 
