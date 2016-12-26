@@ -49,6 +49,14 @@ class TestSorting < Test::Unit::TestCase
     end
   end
 
+  def test_many_negative
+    @classes.each do |klass|
+      subject = klass.send(:new)
+      data = [-1, -770, -567, -4, -45, -9, -5, -23]
+      assert_equal([-770, -567, -45, -23, -9, -5, -4, -1], subject.sort(data))
+    end
+  end
+
   def test_many_elements
     @classes.each do |klass|
       subject = klass.send(:new)

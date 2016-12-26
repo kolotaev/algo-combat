@@ -1,10 +1,15 @@
 #
 # Selection sort is the most trivial sort.
-# Time complexity is O(n^2).
+#
+# Time Performance:
+# O - n^2
+# ø - n^2
+# Ω - n^2
 # Actually (n^2)/2.
+# In Theta almost always outperforms bubble sort and gnome sort.
 #
 # Applications:
-# - only for small sets as a brute force approach.
+# - for small sets it is faster than some other complex algorithms
 #
 class Selection
 
