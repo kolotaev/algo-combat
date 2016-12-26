@@ -21,12 +21,12 @@ class Shell
 
   def sort(data)
 
-    h = 1
-    h = h*3 + 1 while h < data.size/3
+    *gaps = 1
+    gaps << gaps.last*3 + 1 while gaps.last < data.size/3
 
-    while h >= 1
-      (h...data.size).each do |i| # insertion-sort piece
-        i.downto(1) do |j|
+    gaps.reverse_each do |h|
+      (h...data.size).each do |i| # insertion-sort (but with backwards step -= h)
+        i.step(1, -h) do |j|
           if data[j] < data[j-1]
             data[j], data[j-1] = data[j-1], data[j]
           else
@@ -34,7 +34,6 @@ class Shell
           end
         end
       end                        # end of insertion-sort piece
-      h /= 3
     end
 
     data
