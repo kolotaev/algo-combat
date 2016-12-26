@@ -1,5 +1,8 @@
 #
 # Selection sort is the most trivial sort.
+# On the left we have sorted elements, on the right unsorted.
+# The first loop moves the right-left-sides-separator.
+# The second searches for the minimum element.
 #
 # Time Performance:
 # O - n^2

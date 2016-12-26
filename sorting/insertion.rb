@@ -1,5 +1,8 @@
 #
-# Insertion sort is similar to selection-sort in invariants aspect.
+# Insertion sort is similar to selection-sort,
+# but the second loop moves in opposite direction.
+# The first loop moves the right-left-sides-separator.
+# The second moves element to its minimal-weight place towards the start.
 #
 # Time Performance:
 # O - n^2
@@ -19,7 +22,7 @@ class Insertion
   def sort(data)
 
     (0...data.size).each do |i|
-      i.downto(1).each do |j|
+      i.downto(1) do |j|
         if data[j] < data[j-1]
           data[j], data[j-1] = data[j-1], data[j]
         else
