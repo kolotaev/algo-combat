@@ -1,12 +1,14 @@
 #
 # Shell sort resembles insertion-sort,
 # but we move right-left-separator by series of long paces.
+# The series allow to make separate sorted areas (h-sorted)
+# remaining less work for the last sort.
 # The series depends on the method and the incoming data size.
 # OK to use Knuth's 3*n + 1 series function. 1, 4, 7, 10 ...
 #
 # Time Performance:
-# O - N*log^2N or N^5/4
-# θ - N*log^2N or N^5/4
+# O - N*log^2N or N^5/4 - depends on gaps
+# θ - N*log^2N or N^5/4 - depends on gaps
 # Ω - N*logN
 # Actually .
 #
@@ -33,7 +35,7 @@ class Shell
             break
           end
         end
-      end                        # end of insertion-sort piece
+      end
     end
 
     data
