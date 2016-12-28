@@ -10,7 +10,7 @@
 # O - N*log^2N or N^5/4 - depends on gaps
 # θ - N*log^2N or N^5/4 - depends on gaps
 # Ω - N*logN
-# Actually .
+# Actually depends on gaps.
 #
 # Insertion sort's advantage is that it only scans as many elements as needed
 # to determine the correct location of the k+1st element, while selection sort
