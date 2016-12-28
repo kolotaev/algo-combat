@@ -17,12 +17,8 @@
 # must scan all remaining elements to find the absolute smallest element.
 #
 # Applications:
-# - is quick (linear time) for partially sorted arrays.
-# Performs more operations and has higher cache miss ratio than quicksort.
-# However, since it can be implemented using little code and does not use the call stack,
-# some implementations of the qsort function in the C
-# standard library targeted at embedded systems
-# Can also serve as a sub-algorithm of introspective sort.
+# - for medium arrays is a good solution.
+# - due to little code can be used in some hardware.
 #
 class Shell
 
