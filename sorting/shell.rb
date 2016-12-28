@@ -18,6 +18,11 @@
 #
 # Applications:
 # - is quick (linear time) for partially sorted arrays.
+# Performs more operations and has higher cache miss ratio than quicksort.
+# However, since it can be implemented using little code and does not use the call stack,
+# some implementations of the qsort function in the C
+# standard library targeted at embedded systems
+# Can also serve as a sub-algorithm of introspective sort.
 #
 class Shell
 
