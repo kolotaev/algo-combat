@@ -2,6 +2,7 @@ require_relative '../sorting/selection'
 require_relative '../sorting/insertion'
 require_relative '../sorting/shell'
 require_relative '../sorting/bubble'
+require_relative '../sorting/shaker'
 require 'test/unit'
 
 class TestSorting < Test::Unit::TestCase
@@ -11,7 +12,8 @@ class TestSorting < Test::Unit::TestCase
       Selection,
       Insertion,
       Shell,
-      Bubble
+      Bubble,
+      Shaker
     ]
   end
 

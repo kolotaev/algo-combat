@@ -13,7 +13,7 @@
 # Applications:
 # - is a training one. Not used in real practice.
 #
-class Bubble
+class Shaker
 
   def sort(data)
 
