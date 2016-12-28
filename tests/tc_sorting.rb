@@ -1,6 +1,7 @@
 require_relative '../sorting/selection'
 require_relative '../sorting/insertion'
 require_relative '../sorting/shell'
+require_relative '../sorting/bubble'
 require 'test/unit'
 
 class TestSorting < Test::Unit::TestCase
@@ -9,7 +10,8 @@ class TestSorting < Test::Unit::TestCase
     @classes = [
       Selection,
       Insertion,
-      Shell
+      Shell,
+      Bubble
     ]
   end
 
@@ -93,6 +95,22 @@ class TestSorting < Test::Unit::TestCase
       data = %w(A E E L M O T R X P S) # n of inversions is 6 <= cN
       expected = %w(A E E L M O P R S T X)
       assert_equal(expected, subject.sort(data))
+    end
+  end
+
+  def test_last_element_affected
+    @classes.each do |klass|
+      subject = klass.send(:new)
+      data = [1, 2, 3, 4, 0]
+      assert_equal([0, 1, 2, 3, 4], subject.sort(data))
+    end
+  end
+
+  def test_first_element_affected
+    @classes.each do |klass|
+      subject = klass.send(:new)
+      data = [7, 1, 2, 3, 4]
+      assert_equal([1, 2, 3, 4, 7], subject.sort(data))
     end
   end
 
