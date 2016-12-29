@@ -1,30 +1,28 @@
 #
-# We pass forward comparing two neighbour elements and swap them: bigger to the right.
-# We repeat this passes until the situation when there weren't any swaps - it means array is sorted.
-# Bubble - means the heaviest element goes to the right like bubbles go up.
-#
-# Enhancement is not to go all the way forward so not to touch already heavy elements on the right.
+# Modification of bubble sort:
+# in addition every time we go backwards to push minimal element to the left;
+# it solves rabbits-turtles problem.
 #
 # Time Performance:
 # O - n^2
 # θ - n^2
 # Ω - n
 #
-# Applications:
-# - is a training one. Not used in real practice.
-#
 class Shaker
 
   def sort(data)
 
-    n = data.size - 1
-    loop do
-      swapped = FALSE
-      (0...n).each do |i|
-        data[i], data[i+1], swapped = data[i+1], data[i], TRUE if data[i+1] < data[i]
+    left, right = 0, data.size-1
+
+    while left <= right
+      left.upto(right-1) do |i|
+        data[i], data[i+1] = data[i+1], data[i] if data[i] > data[i+1]
       end
-      n -= 1
-      break unless swapped
+      right -= 1
+      (right-1).downto(left) do |i|
+        data[i], data[i+1] = data[i+1], data[i] if data[i] > data[i+1]
+      end
+      left += 1
     end
 
     data
