@@ -6,7 +6,7 @@
 # The series depends on the method and the incoming data size.
 # OK to use Knuth's 3*n + 1 series function. 1, 4, 7, 10 ...
 #
-# Time Performance:
+# Performance:
 # O - N*log^2N or N^5/4 - depends on gaps
 # θ - N*log^2N or N^5/4 - depends on gaps
 # Ω - N*logN

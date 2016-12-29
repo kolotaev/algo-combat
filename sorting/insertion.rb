@@ -4,7 +4,7 @@
 # The first loop moves the right-left-sides-separator.
 # The second moves element to its minimal-weight place towards the start.
 #
-# Time Performance:
+# Performance:
 # O - n^2
 # θ - n^2
 # Ω - n

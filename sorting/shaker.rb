@@ -3,7 +3,7 @@
 # in addition every time we go backwards to push minimal element to the left;
 # it solves rabbits-turtles problem.
 #
-# Time Performance:
+# Performance:
 # O - n^2
 # θ - n^2
 # Ω - n

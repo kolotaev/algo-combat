@@ -5,7 +5,7 @@
 #
 # Enhancement is not to go all the way forward so not to touch already heavy elements on the right.
 #
-# Time Performance:
+# Performance:
 # O - n^2
 # θ - n^2
 # Ω - n

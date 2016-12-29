@@ -4,7 +4,7 @@
 # The first loop moves the right-left-sides-separator.
 # The second searches for the minimum element.
 #
-# Time Performance:
+# Performance:
 # O - n^2
 # θ - n^2
 # Ω - n^2
