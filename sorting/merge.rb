@@ -26,6 +26,7 @@ class Merge
     mid = low + (high - low)/2
     sorter(data, aux, low, mid)
     sorter(data, aux, mid+1, high)
+    return if data[mid+1] > data[mid] # optimization - stop if already sorted
     merge(data, aux, low, mid, high)
     end
 
