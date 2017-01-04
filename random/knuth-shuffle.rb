@@ -2,7 +2,7 @@
 # Can be always used as a main shuffling algorithm since it's uniformly random.
 # Also known as Fisher–Yates shuffle.
 #
-# Time Performance:
+# Performance:
 # O - n
 # θ - n
 # Ω - n
