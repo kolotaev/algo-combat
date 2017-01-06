@@ -1,12 +1,14 @@
 #
 # Divide and conquer approach.
 # Divide array into 2 halves and sort each individually.
-# Sorting is done recursive dividing array by half and merging.
+# Sorting is done recursively dividing array by half and merging.
 #
 # Performance:
 # O - NlogN
 # θ - NlogN
 # Ω - NlogN
+#
+# Stable? yes
 #
 # Applications:
 # - in many languages is used as a primary sorting implementation

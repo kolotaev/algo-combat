@@ -12,6 +12,9 @@
 # Ω - N*logN
 # Actually depends on gaps.
 #
+# Stable? no
+#
+#
 # Insertion sort's advantage is that it only scans as many elements as needed
 # to determine the correct location of the k+1st element, while selection sort
 # must scan all remaining elements to find the absolute smallest element.
