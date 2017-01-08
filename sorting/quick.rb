@@ -13,7 +13,8 @@
 # θ - N*logN
 # Ω - N*logN
 # Doesn't need additional N memory, because does sorting in-place.
-# Actually performs 1,39 slower than merge-sort.
+# Actually performs 1,39 slower in theory than merge-sort,
+# but in practise is faster because of less data movement!
 #
 # Stable? no
 #
