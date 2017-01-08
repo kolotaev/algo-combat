@@ -17,7 +17,8 @@ class TestSorting < Test::Unit::TestCase
       Bubble,
       Shaker,
       Merge,
-      Quick
+      MergeBottomUp,
+      # Quick
     ]
   end
 
@@ -69,7 +70,7 @@ class TestSorting < Test::Unit::TestCase
     end
   end
 
-  def test_many_elements
+  def test_a_many_elements
     @classes.each do |klass|
       subject = klass.send(:new)
       data = [1, 0, 7, 8, 66, -7, 5, 54, 0, 3, 1000, 7]
