@@ -26,7 +26,7 @@ class Merge
   private
 
   def sorter(data, aux, low, high)
-    return data if high <= low
+    return if high <= low
     mid = low + (high - low)/2
     sorter(data, aux, low, mid)
     sorter(data, aux, mid+1, high)

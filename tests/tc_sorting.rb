@@ -18,7 +18,7 @@ class TestSorting < Test::Unit::TestCase
       Shaker,
       Merge,
       MergeBottomUp,
-      # Quick
+      Quick
     ]
   end
 
