@@ -2,8 +2,8 @@
 # Allows to immediately extract min or max element.
 #
 # Has interface:
-# - insert (like enqueue)
-# -   (like dequeue)
+# - insert (like enqueue) (O - logN)
+# - delete_max (like dequeue) (O - logN)
 # - empty?
 # - size
 #

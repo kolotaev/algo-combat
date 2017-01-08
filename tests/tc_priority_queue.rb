@@ -18,6 +18,21 @@ class TestPriorityQueue < Test::Unit::TestCase
     assert_equal(3, @queue.size)
   end
 
+  def test_size_of_one
+    @queue.insert 'a'
+    assert_equal(1, @queue.size)
+  end
+
+  def test_size_after_delete
+    @queue.insert 'a'
+    @queue.insert 'b'
+    @queue.delete_max
+    @queue.delete_max
+    assert_equal(0, @queue.size)
+    @queue.delete_max
+    assert_equal(0, @queue.size)
+  end
+
   def test_size_after_delete_max
     @queue.insert 'a'
     @queue.insert 'b'
