@@ -1,11 +1,19 @@
 #
 # Divide and conquer approach.
+# Partition array so that there is an element
+# where all the elements to the left of it are no higher
+# and all the elements to the right of it are no lower
+# | <= v | v | v >= |
+# Repeat this for each half recursively.
+# V element should be somewhere in the middle so that we get division by 2
+# For that we shuffle an array. We can also apply method of median ninths.
 #
 # Performance:
-# O - N*logN
+# O - N^2 when array is sorted
 # θ - N*logN
 # Ω - N*logN
 # Doesn't need additional N memory, because does sorting in-place.
+# Actually performs 1,39 slower than merge-sort.
 #
 # Stable? no
 #
