@@ -27,7 +27,7 @@ class TestPriorityQueue < Test::Unit::TestCase
     assert_equal(1, @queue.size)
   end
 
-  def test_delete_max_returns_maximal_element
+  def test_delete_max_returns_maximum_element
     @queue.insert 'b'
     @queue.insert 'x'
     @queue.insert 'g'
@@ -37,7 +37,7 @@ class TestPriorityQueue < Test::Unit::TestCase
     assert_equal('c', @queue.delete_max)
   end
 
-  def test_delete_max_returns_maximal_element_for_duplicates
+  def test_delete_max_returns_maximum_element_for_duplicates
     @queue.insert 'b'
     @queue.insert 'g'
     @queue.insert 'b'
@@ -48,6 +48,15 @@ class TestPriorityQueue < Test::Unit::TestCase
     assert_equal('g', @queue.delete_max)
     assert_equal('b', @queue.delete_max)
     assert_equal('b', @queue.delete_max)
+  end
+
+  def test_delete_max_returns_maximum_for_three_elements
+    @queue.insert 'f'
+    @queue.insert 'x'
+    @queue.insert 'z'
+    assert_equal('z', @queue.delete_max)
+    assert_equal('x', @queue.delete_max)
+    assert_equal('f', @queue.delete_max)
   end
 
   def test_delete_max_returns_nil_if_empty

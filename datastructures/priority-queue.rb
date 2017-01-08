@@ -24,14 +24,14 @@ class PriorityQueue
 
   def insert(element)
     @data << element
-    sink(@data.last)
+    swim(@data.size-1)
   end
 
   def delete_max
     max = @data[1]
-    @data[1], @data[-1] = @data[-1], @data[1]
-    sink(1)
+    @data[1] = @data[-1]
     @data.delete_at(-1)
+    sink(1)
     max
   end
 
@@ -46,10 +46,19 @@ class PriorityQueue
   private
 
   def swim(k)
-
+    while k > 1 && @data[k/2] < @data[k]
+      @data[k/2], @data[k] = @data[k], @data[k/2]
+      k /= 2
+    end
   end
 
   def sink(k)
-
+    while k*2 < @data.size
+      i = k*2
+      i += 1 if i < @data.size-1 && @data[i+1] > @data[i]
+      break if @data[i] <= @data[k]
+      @data[k], @data[i] = @data[i], @data[k]
+      k = i
+    end
   end
 end
