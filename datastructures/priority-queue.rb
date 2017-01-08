@@ -3,7 +3,7 @@
 #
 # Has interface:
 # - insert (like enqueue)
-# - delete_max (like dequeue)
+# -   (like dequeue)
 # - empty?
 # - size
 #

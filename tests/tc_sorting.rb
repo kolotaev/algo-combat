@@ -121,4 +121,12 @@ class TestSorting < Test::Unit::TestCase
     end
   end
 
+  def test_many_same_values
+    @classes.each do |klass|
+      subject = klass.send(:new)
+      data = [0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1]
+      assert_equal([0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1], subject.sort(data))
+    end
+  end
+
 end
