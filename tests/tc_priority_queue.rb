@@ -1,4 +1,4 @@
-require_relative '../datastructures/priority-@queue'
+require_relative '../datastructures/priority-queue'
 require 'test/unit'
 
 class TestPriorityQueue < Test::Unit::TestCase
