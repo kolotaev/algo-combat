@@ -16,7 +16,7 @@
 # - event-driven simulation
 # - monitoring
 
-class Priority
+class PriorityQueue
   def initialize
     @data = Array.new
     @data[0] = nil
